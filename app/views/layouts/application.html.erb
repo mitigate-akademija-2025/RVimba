@@ -25,6 +25,14 @@
 
   <body>
     <main>
+    <header>
+      <nav>
+        <ul>
+          <li><%= link_to "Quizzes", quizzes_path %></li>
+        </ul>
+      </nav>
+    <h1><%= yield :title %></h1>
+    </header>
       <%= yield %>
     </main>
   </body>

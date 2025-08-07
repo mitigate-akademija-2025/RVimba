@@ -9,4 +9,15 @@
     <%= quiz.description %>
   </p>
 
+  <% if quiz.questions.any? %>
+    <h2>Questions</h2>
+    <ol>
+      <% quiz.questions.each do |question| %>
+        <li><%= question.name %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No questions available for this quiz.</p>
+  <% end %>
+
 </div>
