@@ -1,0 +1,11 @@
+<tr id="<%= dom_id quiz %>">
+    <td><%= quiz.id %></td>
+    <td><%= link_to quiz.title, quiz %></td>
+    <td>
+        <div style="display: flex; gap: 0.5rem;">
+            <%= button_to "Show", quiz, method: :get %>
+            <%= button_to "Edit", edit_quiz_path(quiz), method: :get %>
+            <%= button_to "Destroy", quiz, method: :delete, data: { confirm: "Are you sure?" } %>
+        </div>
+    </td>
+</tr>
